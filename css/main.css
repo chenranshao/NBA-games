@@ -1,0 +1,81 @@
+a,body{color:#444}
+body{margin:0;padding:0;}
+body{line-height:1.231;-webkit-text-size-adjust:100%}
+a{text-decoration:none}
+a:hover{color:#a41f24;text-decoration:underline}
+img{border:0;vertical-align:middle}
+ol,ul{list-style-type:none}
+.clear{ clear: both;}
+.header{ width:980px; margin:0 auto;margin-left:auto; margin-right:auto;}
+.content,.footer{ width:1050px; margin-left:auto; margin-right:auto;}
+.logo,.nav,.nav-item li{ float: left;}
+.nav{ margin-left: 30px; margin-top: 30px;}
+.header{ margin-top: 20px;}
+.nav-item li{ margin: 0px 25px;}			
+.dropDownMenu{position:relative}
+.nav .nav-item li:hover > ul {display: block;width: 90px;background: #d6623d;}
+.nav .nav-item li .drapDown {width: 90px;display: none;position: absolute;z-index: 99999;top: 30px;left: -50px;padding-bottom: 15px;border-radius: 5px;border:1px solid #fff;}
+.nav .nav-item li .drapDown li {margin-left: -5px;margin-top: 10px;}
+.nav .nav-item li .drapDown li a {width: 90px;font-size: 15px;height: 10px;line-height: 10px;text-align: center;color: #fff;}
+.nav .nav-item li .drapDown:after {content: '';position: absolute;left: 60px;top: -8px;border-left: 6px solid transparent;border-right: 6px solid transparent;border-bottom: 9px solid #d6623d;}
+.nav .nav-item li .drapDown li a:hover {color: #fff;}
+.dropDownMenu:after {content: '';position: absolute;left: 35px;top: 10px;border-left: 4px solid transparent;border-right: 4px solid transparent;border-top: 6px solid #151515;transition: all 0.3s;}
+.dropDownMenu:hover:after {border-left: 4px solid transparent;border-right: 4px solid transparent;border-top: 6px solid #f8f8f8;}
+/***********************content********************************/
+.content{ margin-top: 15px;}
+.content .left-content,.center-content,.right-content{ float: left;margin-top: 15px;}
+.left-content{ width: 33%;margin-right: 10px;}
+.center-content{ width: 36%;margin-right: 10px;}
+.right-content{ width: 29%;}
+/************************left*********************************/
+.photo{ height: 300px;}
+.luntan {overflow:hidden;color:#900;border: 1px solid #666;}
+.luntan .ltitle a,.luntan .ltitle a:visited{color:#900}
+.luntan .textInfo{height:36px;overflow:hidden;color:#949494}
+.luntan img{border: 1px solid gray;padding: 1px;}
+.luntan .list ul{padding:3px 0;overflow:hidden;zoom:1;}
+.luntan .list li{height:20px;overflow:hidden;vertical-align:top;font-size: 14px;}
+.list a{font-size: 13px;}
+/************************center*********************************/
+h2{font-size:14px;font-weight:bold;line-height:190%;}
+h3{font-size:12px;font-weight:normal;line-height:190%;color:#ccc;}
+.text h3 a{margin:0 3px;}
+.text{width:100%;position:relative;}
+.text h2{height:24px;line-height:24px;overflow:hidden;zoom:1;}
+.text h2 a,.text h2 a:visited{color:#900}
+.text h3{height:20px;line-height:20px;overflow:hidden;zoom:1;}
+.text hr{margin:4px 0;overflow:hidden}
+.stream_i,.stream_i:hover,.stream_i:active{background:url(../img/bg2.png) no-repeat -762px -92px;padding-left:14px;}
+/************************right*********************************/
+.todaygame{margin-bottom:8px}
+.todaygame .listBox,.todaygame .switchDiv{border-left:1px solid #191919;border-right:1px solid #191919;}
+.switchDiv{border-top:1px solid #191919;}
+.switchDiv{background: none repeat scroll 0 0 #F7F7F7;height:30px;padding:7px 12px 0;line-height:16px;overflow:hidden;}
+.subSwitch{ margin-left: 90px;margin-top: 5px;}
+.subSwitch .curTime{float:left;display:inline-block;width:64px;text-align:center;color:#666;}
+.subSwitch .prev,.subSwitch .next{float:left;width:17px;height:16px;overflow:hidden;display:inline-block;background:url(../img/bg2.png) no-repeat -327px -249px;text-indent:-9999em;}
+.subSwitch .next{background-position:-347px -249px;}
+.todaygame .screening{float:left;font-size:14px;font-weight:700}
+.gamespace_list_no .bifen,.gamespace_list .bifen{width:56px;height:24px;line-height:24px;background:none}
+.gamespace_list_no{background:url(../img/jianbian.gif) repeat-x 0 -530px;height:40px;padding:5px 4px;overflow:hidden;font-weight:normal;}
+.gamespace_list_no img,.gamespace_list img{width:25px;height:18px;}
+.bifen{font-weight:bold;text-align:center;}
+.gamespace_list_no .bifen{display:block;width:60px;height:22px;background:url(../img/bg2.png) no-repeat; background-position: -601px -150px;}
+.gamespace_list .bifen{width:60px;display:block}
+.todaygame .nameText{float:left;width:80px;height:18px;overflow:hidden;display:inline-block}
+.bottom a,.newsList li a{color:#FFF;}
+.newsList{margin-top: 0px;}
+.newsList{padding:8px 3px;background:#2e353c;border-left:1px solid #191919;border-right:1px solid #191919;}
+.newsList li{height:22px;line-height:22px;border-bottom:1px dotted #697683;padding-left:15px;background:url(../img/bg2.png) no-repeat -763px -90px;overflow:hidden}
+.listBox{ margin-bottom: -18px;}
+.bottom{background-color: #2e353c;height:31px;text-align:center;line-height:30px;padding-bottom: 8px;}
+			
+.top{height:30px;padding:7px 12px 0;line-height:1px;overflow:hidden;margin-bottom: 5px;}
+.todayplayer{margin-bottom:8px;position:relative;border:1px solid #191919;}
+.todayplayer .tab{background:url(../img/jianbian.gif) repeat-x 0 -406px;height:27px;line-height:27px;padding:1px 0 0 4px;overflow:hidden;}
+.todayplayer .tab a{width:37px;display:block;float:left;text-align:center;padding-right:1px;margin:0px 5px;}
+.todayplayer .tab a:hover{text-decoration:none;}
+.todayplayer .sPage_on{background:url(../img/bg2.png) no-repeat -600px 0;line-height:27px;height:30px;color:#fff;cursor:pointer;}
+.todayplayer .sPage_off{background:url(../img/jianbian.gif) no-repeat 36px -450px;line-height:27px;height:30px;cursor:pointer;}
+.zhanji th,.zhanji td{height:22px; border-bottom:1px solid #cdcdcd; padding:2px 0;}
+.num1,.num2,.num3,.num14,.num15{margin-right: 10px;margin-left: 5px;}

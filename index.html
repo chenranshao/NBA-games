@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/picTurn.css">
+		<script type="text/javascript" src="js/picTurn.js"></script>
+		<script>
+			function tabit(tabName,tabNo,tabAll,status){
+				var i=0;
+				for(i = 0;i<tabAll;i++){
+					document.getElementById(tabName+"_btn"+i).className=status+"off";
+				}
+				var j=0;
+				for(j = 0;j<tabAll;j++){
+					document.getElementById(tabName+"_div"+j).style.display="none";
+				}
+				var tab = document.getElementById(tabName+"_btn"+tabNo);
+				var disp = document.getElementById(tabName+"_div"+tabNo);
+				tab.className=status+"on";
+				disp.style.display="block";
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<a title="" href="#"><img src="img/logo.jpg" alt="NBA" width="200px" height="100px"/></a>
+			</div>
+			<div class="nav">
+				<ul class="nav-item">
+					<li><a href="#">首页</a></li>
+					<li class="line">|</li>
+					<li class="dropDownMenu">
+						<a href="#" class="set" target="_blank">新闻</a>
+						<ul class="drapDown">
+							<li><a href="#" target="_blank">NBA新闻</a></li>
+	                        <li><a href="#" target="_blank">火箭新闻</a></li>
+							<li><a href="#" target="_blank">骑士新闻</a></li>
+	                        <li><a href="#" target="_blank">湖人新闻</a></li>
+							<li><a href="#" target="_blank">勇士新闻</a></li>
+							<li><a href="#" target="_blank">更多</a></li>
+						</ul>
+					</li>
+					<li class="line">|</li>
+					<li class="dropDownMenu">
+	                    <a href="#" class="set" target="_blank">视频</a>
+	                    <ul class="drapDown">
+	                        <li><a href="#" target="_blank">比赛视频</a></li>
+	                        <li><a href="#" target="_blank">热门视频</a></li>                                     
+	                        <li><a href="#" target="_blank">骑士视频</a></li>
+	                        <li><a href="#" target="_blank">火箭视频</a></li>
+							<li><a href="#" target="_blank">湖人视频</a></li>
+	                        <li><a href="#" target="_blank">诸强视频</a></li>
+	                        <li><a href="#" target="_blank">传奇球星</a></li>
+	                        <li><a href="#" target="_blank">更多</a></li>
+	                    </ul>
+	                </li>
+	                <li class="line">|</li>
+					<li class="dropDownMenu">
+						<a href="#" class="set" target="_blank">赛程</a>
+						<ul class="drapDown">
+							<li><a href="#" target="_blank">NBA赛程</a></li>
+	                        <li><a href="#" target="_blank">火箭赛程</a></li>
+							<li><a href="#" target="_blank">骑士赛程</a></li>
+	                        <li><a href="#" target="_blank">湖人赛程</a></li>
+	                        <li><a href="#" target="_blank">勇士赛程</a></li>
+						</ul>
+					</li>
+					<li class="line">|</li>
+					<li class="dropDownMenu">
+						<a href="#" class="set" target="_blank">论坛</a>
+						<ul class="drapDown">
+	                        <li><a href="#" target="_blank">火箭</a></li>
+							<li><a href="#" target="_blank">骑士</a></li>
+	                        <li><a href="#" target="_blank">湖人</a></li>
+							<li><a href="#" target="_blank">勇士</a></li>
+	                        <li><a href="#" target="_blank">篮球场</a></li>
+	                        <li><a href="#" target="_blank">热门话题</a></li>
+	                        <li><a href="#" target="_blank">深篮讨论</a></li>
+						</ul>
+					</li>
+	            </ul>
+	        </div>
+        	<div class="clear"></div>
+		</div>
+		
+		<div class="content">
+			<hr size="2" width="100%"/>
+			
+			<div class="left-content">
+				<!--动态图片-->
+				
+					<div id="playimages" class="play">
+				    <ul class="big_pic">
+				
+						<div class="prev"></div>
+						<div class="next"></div>
+				
+						<div class="text">加载图片说明……</div>
+						<div class="length">计算图片数量……</div>
+						
+						<a class="mark_left" href="javascript:;"></a>
+						<a class="mark_right" href="javascript:;"></a>
+						<div class="bg"></div>
+						
+				        <li style="z-index:1;"><img src="img/pic1.jpg" /></li>
+				        <li><img src="img/pic2.jpg" /></li>
+				        <li><img src="img/pic3.jpg" /></li>
+				        <li><img src="img/pic4.jpg" /></li>
+				    </ul>
+				    <div class="small_pic">
+				        <ul>
+				            <li style="opacity: 1;"><img src="img/pic1.jpg" /></li>
+				            <li><img src="img/pic2.jpg" /></li>
+				        	<li><img src="img/pic3.jpg" /></li>
+				        	<li><img src="img/pic4.jpg" /></li>
+				        </ul>
+				    </div>
+				</div>
+				<div class="luntan">
+					<div class="top">
+                        <h4 style="color: #666">精彩论坛</h4>
+                    </div>
+					<table border="0" width="100%" cellpadding="1px" cellspacing="3px">
+						<tr>
+							<td rowspan="2">
+								<a href="#" target="_blank">
+									<img src="img/luntan1.jpg"/>
+								</a>
+							</td>
+							<td valign="bottom"><span class="ltitle">
+						        	<a href="#"  target="_blank">
+						                    伦纳德：圣城故事，未完待续                </a>
+						        </span>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="textInfo">伦纳德是自“大虫”罗德曼之后，联盟首位蝉联 DPOY 的前锋。 </span></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td rowspan="2">
+								<a href="#" target="_blank">
+									<img src="img/luntan2.jpg"/>
+								</a>
+							</td>
+							<td><span class="ltitle">
+							        <a href="#" target="_blank">
+							                    回忆与见证：96公牛 & 16勇士                </a>
+							    </span>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="textInfo">只想说，如果可以，好想看这两支球队抡开胳膊杀一场。</span></td>
+						</tr>
+					</table>
+					<div class="list">
+				        <ul>
+				            <li>
+				                &nbsp;&nbsp;<a href="#" target="_blank">
+				                    四十岁的邓肯，生如夏花                </a>
+				                                    &nbsp;&nbsp;<a href="#" target="_blank">
+				                        对季后赛的 45 条大胆预言                    </a>
+				                            </li>
+				            <li>
+				                &nbsp;&nbsp;<a href="#" target="_blank">
+				                    有谁曾与DPOY擦肩而过？                </a>
+				                                    &nbsp;&nbsp;<a href="#" target="_blank">
+				                        若将11届新秀重新洗牌？                    </a>
+				                            </li>
+				        </ul>
+    				</div>
+				</div>
+			</div>
+			
+			<div class="center-content">
+				<div class="text">
+                    <h2><a target="_blank" href="#" >保罗右手第三掌骨骨折退赛</a>&nbsp;&nbsp;<a target="_blank" href="#"style="color:#AF4545">库里右膝扭伤至少缺两周</a></h2>
+<h3><a target="_blank" href="#" >里弗斯：明天评估保罗的具体情况</a>|<a target="_blank" href="#" >巴克利：雷霆会击败马刺进西决</a></h3>
+<h3><a target="_blank" href="#" >惨！美球迷心疼保罗格里芬相继受伤</a>|<a target="_blank" href="#" >斯科特：湖人好运，期待再见</a></h3>
+<h3><a target="_blank" href="#" >库里的膝伤到底是什么样的伤病？</a>|<a target="_blank" href="#" >勇士经理：两周只是粗略的估计</a></h3>
+<h3><a target="_blank" href="#" >德里克-费舍尔有意湖人主帅一职</a>|<a target="_blank" href="#" >库里谈缺席比赛：我不想坐在场下</a></h3>
+                    <hr />
+                    <h2><a target="_blank" href="#" >保罗格里芬退场快船负开拓者</a>&nbsp;&nbsp;<a target="_blank" href="#"style="color:#AF4545">邓肯40岁生日马刺晋级次轮</a></h2>
+<h3><a target="_blank" href="#" >美国球迷探讨詹姆斯为何如此耐用</a>|<a target="_blank" href="#" >湖人有意沃顿，还将面试梅西纳</a></h3>
+<h3><a target="_blank" href="#" >火力全开！书豪打板三分耸肩庆祝</a>|<a target="_blank" href="#" >林书豪：摊手动作并非致敬乔丹</a></h3>
+<h3><a target="_blank" href="#" >库班：杜兰特是雷霆唯一超级巨星</a>|<a target="_blank" href="#" >杜兰特谈库班言论：他是个白痴</a></h3>
+<h3><a target="_blank" href="#" >威少场均25+5+10，20年第二人</a>|<a target="_blank" href="#" >波什发文忆科比：把游戏当成真正的比赛</a></h3>
+                    <hr />
+                    <h2><a target="_blank" class="stream_i" href="#">五佳球：王炸组合耍流氓</a>&nbsp;&nbsp;<a target="_blank" class="stream_i" href="#"style="color:#AF4545">保罗掌骨骨折退出比赛</a></h2>
+<h3><a target="_blank" class="stream_i" href="#">帮主不淡定了！书豪强突再打2+1</a>|<a target="_blank" class="stream_i" href="#" >无解！书豪vs热火21分表现</a></h3>
+<h3><a target="_blank" class="stream_i" href="#">安德森扑抢，威少发怒险冲突</a>|<a target="_blank" class="stream_i" href="#" >牲口啊！当今联盟最变态怪物</a></h3>
+<h3><a target="_blank" class="stream_i" href="#">死防库里！模仿帝爆笑模仿戴拉</a>|<a target="_blank" class="stream_i" href="#" >书豪打板三分模仿乔丹耸肩庆祝</a></h3>
+                    <hr/>
+                </div>
+			</div>
+			
+			<div class="right-content">
+				<div class="todaygame">
+					<div class="switchDiv">
+						<div class="subSwitch">
+							<a href="javascript:;" onclick="game.prevday();" class="prev" title="前一天">前一天</a>
+							<span class="curTime">今日比赛</span>
+							<a href="javascript:;" onclick="game.nextday();" class="next" title="后一天">后一天</a>
+						</div>
+					</div>
+					<div class="listBox" id="nbaScoreTab_div0">
+
+						<div class="gamespace_list_no">
+							<table width="100%" cellspacing="0" cellpadding="0" border="0">
+							<tbody>
+								<tr>
+									<td width="9%" style="padding-right:4px"><b>2</b></td>
+										<td >
+											<a href="#" title="黄蜂" target="_blank"><span class="teamlogo n30"> </span></a>
+										</td>
+										<td align="right">
+										<span class="nameText">
+											<a target="_blank" title="黄蜂" href = "#">黄蜂</a>
+										</span>
+										</td>
+										<td>
+										<span class="bifen">
+											<a target='_blank' href="#" title="黄蜂89:85热火" > 89:85  </a>
+										</span>
+										</td>
+										<td align="left">
+										<span class="nameText">
+											<a target="_blank" title="热火" href = "#">热火</a>
+										</span>
+										</td>
+										<td align="right">
+											<a href="#" title="热火" target="_blank"><span class="teamlogo n2"></span></a>
+										</td>
+										<td width="9%" style="padding-left:3px"><b>2</b></td>
+									</tr>
+								<tr valign="top">
+									<td colspan="4">
+										<a href="#" onclick="ga('boxscore-NBA-2016-04-26-战报-黄蜂-热火-沃克34分黄蜂扳平大比分-1')" target="_blank" title="沃克34分黄蜂扳平大比分">沃克34分黄蜂扳平大比分</a>
+									</td>
+									<td align="right" colspan="3">
+										<a href="#" target="_blank"  title="黄蜂-热火比赛数据">数据</a>
+								    	|  <a href="#" target="_blank"  title="黄蜂-热火比赛视频">视频</a>
+									</td>
+								 </tr>
+							</tbody>
+							</table>
+						</div>
+						
+						<div class="gamespace_list_no">
+							<table width="100%" cellspacing="0" cellpadding="0" border="0">
+							<tbody>
+								<tr>
+									<td width="9%" style="padding-right:4px"><b>4</b></td>
+										<td >
+											<a href="#" title="雷霆" target="_blank"><span class="teamlogo n30"> </span></a>
+										</td>
+										<td align="right">
+										<span class="nameText">
+											<a target="_blank" title="雷霆" href = "#">雷霆</a>
+										</span>
+										</td>
+										<td>
+										<span class="bifen">
+											<a target='_blank' href="#" title="雷霆118:104小牛" > 118:104  </a>
+										</span>
+										</td>
+										<td align="left">
+										<span class="nameText">
+											<a target="_blank" title="小牛" href = "#">小牛</a>
+										</span>
+										</td>
+										<td align="right">
+											<a href="#" title="小牛" target="_blank"><span class="teamlogo n2"></span></a>
+										</td>
+										<td width="9%" style="padding-left:3px"><b>1</b></td>
+									</tr>
+								<tr valign="top">
+									<td colspan="4">
+										<a href="#" onclick="ga('boxscore-NBA-2016-04-26-战报-雷霆-小牛-威少36+12雷霆淘汰小牛-2')" target="_blank" title="威少36+12雷霆淘汰小牛">威少36+12雷霆淘汰小牛</a>
+									</td>
+									<td align="right" colspan="3">
+										<a href="#" target="_blank"  title="雷霆-小牛比赛数据">数据</a>
+								    	|  <a href="#" target="_blank"  title="雷霆-小牛比赛视频">视频</a>
+									</td>
+								 </tr>
+							</tbody>
+							</table>
+						</div>
+						
+						<div class="gamespace_list_no">
+							<table width="100%" cellspacing="0" cellpadding="0" border="0">
+							<tbody>
+								<tr>
+									<td width="9%" style="padding-right:4px"><b>2</b></td>
+										<td >
+											<a href="#" title="开拓者" target="_blank"><span class="teamlogo n30"> </span></a>
+										</td>
+										<td align="right">
+										<span class="nameText">
+											<a target="_blank" title="开拓者" href = "#">开拓者</a>
+										</span>
+										</td>
+										<td>
+										<span class="bifen">
+											<a target='_blank' href="#" title="开拓者98:84快船" > 98:84  </a>
+										</span>
+										</td>
+										<td align="left">
+										<span class="nameText">
+											<a target="_blank" title="快船" href = "#">快船</a>
+										</span>
+										</td>
+										<td align="right">
+											<a href="#" title="快船" target="_blank"><span class="teamlogo n2"></span></a>
+										</td>
+										<td width="9%" style="padding-left:3px"><b>2</b></td>
+									</tr>
+								<tr valign="top">
+									<td colspan="4">
+										<a href="#" onclick="ga('boxscore-NBA-2016-04-26-战报-开拓者-快船-保罗格里芬伤退负开拓者-3')" target="_blank" title="保罗格里芬伤退负开拓者">保罗格里芬伤退负开拓者</a>
+									</td>
+									<td align="right" colspan="3">
+										<a href="#" target="_blank"  title="开拓者-快船比赛数据">数据</a>
+								    	|  <a href="#" target="_blank"  title="开拓者-快船比赛视频">视频</a>
+									</td>
+								 </tr>
+							</tbody>
+							</table>
+						</div>
+						<ul class="newsList">
+							<li><a href="#" target="_blank">模仿乔丹耸肩庆祝！书豪逆天打板三分</a></li>
+							<li><a href="#" target="_blank">不是超巨？威少狂砍36+12+9淘汰小牛</a></li>
+							<li><a href="#" target="_blank">火爆！小乔丹不满戴维斯拉扯引发口角</a></li>
+							<li><a href="#" target="_blank">致命2+1！杜兰特对小牛G5砍33分表现</a></li>
+							<li><a href="#" target="_blank">欺负老人！威少杜兰特这是在打2K吗？</a></li>
+							<li><a href="#" target="_blank">连中关键球！沃克对热火G4狂砍34分</a></li>
+							<li><a href="#" target="_blank">考特尼李关键篮板，乔丹兴奋上前击掌</a></li>
+							<li><a href="#" target="_blank">沃克巧妙低手上篮，乔丹激动起身鼓掌</a></li>
+						</ul>
+					</div>
+					<div class="bottom">
+						<a title="NBA赛程" target="_blank" href="#">NBA赛程</a>
+								<font color="#FFFFFF"> | </font>
+						<a title="比赛直播" target="_blank" href="#">比赛直播</a>
+					</div>
+				</div>
+				
+				<div class="todayplayer">
+					<div class="top">
+					    <h4>球员今日</h4>
+					</div>
+					<div class="center">
+					
+					    <div id="data_div0" style="display: block;">
+					        <div class="tab" id="data_menu">
+					            <a class="sPage_on" id="shujutab_btn0" onmouseover="tabit('shujutab',0,6,'sPage_')">得分</a>
+					            <a class="sPage_off" id="shujutab_btn1" onmouseover="tabit('shujutab',1,6,'sPage_')">篮板</a>
+					            <a class="sPage_off" id="shujutab_btn2" onmouseover="tabit('shujutab',2,6,'sPage_')">助攻</a>
+					            <a class="sPage_off" id="shujutab_btn3" onmouseover="tabit('shujutab',3,6,'sPage_')">抢断</a>
+					            <a class="sPage_off" id="shujutab_btn4" onmouseover="tabit('shujutab',4,6,'sPage_')">三分</a>
+					            <a class="sPage_off" id="shujutab_btn5" onmouseover="tabit('shujutab',5,6,'sPage_')">盖帽</a>
+					        </div>
+					               <div id="shujutab_div0" style='display: block;' >
+					            <div class="zhanji">
+					                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+					                    <tbody>
+					                    <tr align="left">
+					                        <th scope="col">&nbsp;</th>
+					                        <th width="42%" scope="col">姓名</th>
+					                        <th width="30%" scope="col">球队</th>
+					                        <th width="28%" scope="col">今日数据</th>
+					                    </tr>
+					                   
+					                                                    <tr>
+				                        <td ><div class="num1">1</div></td>
+				                        <td ><a href="#" target="_blank">R.威斯布鲁克</a></td>
+				                        <td ><a href="#" target="_blank">雷霆</a></td>
+				                        <td  align="center">36</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num2">2</div></td>
+				                        <td ><a href="#" target="_blank">K.沃克</a></td>
+				                        <td ><a href="#" target="_blank">黄蜂</a></td>
+				                        <td  align="center">34</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num3">3</div></td>
+				                        <td ><a href="#" target="_blank">K.杜兰特</a></td>
+				                        <td ><a href="#" target="_blank">雷霆</a></td>
+				                        <td  align="center">33</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num14">4</div></td>
+				                        <td ><a href="#" target="_blank">A.法鲁克</a></td>
+				                        <td ><a href="#" target="_blank">开拓者</a></td>
+				                        <td  align="center">30</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num15">5</div></td>
+				                        <td ><a href="#" target="_blank">D.诺维茨基</a></td>
+				                        <td ><a href="#" target="_blank">小牛</a></td>
+				                        <td  align="center">24</td>
+				                             </tr>
+					                    </tbody>
+					                </table>
+					            </div>
+					        </div>
+					               <div id="shujutab_div1" style='display: none;' >
+					            <div class="zhanji">
+					                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+					                    <tbody>
+					                    <tr align="left">
+					                        <th scope="col">&nbsp;</th>
+					                        <th width="42%" scope="col">姓名</th>
+					                        <th width="30%" scope="col">球队</th>
+					                        <th width="28%" scope="col">今日数据</th>
+					                    </tr>
+					                   
+					                                                    <tr>
+					                        <td ><div class="num1">1</div></td>
+					                        <td ><a href="#" target="_blank">D.乔丹</a></td>
+					                        <td ><a href="#" target="_blank">快船</a></td>
+					                        <td  align="center">15</td>
+					                             </tr>
+					                                                    <tr>
+					                        <td ><div class="num2">2</div></td>
+					                        <td ><a href="#" target="_blank">M.普拉姆利</a></td>
+					                        <td ><a href="#" target="_blank">开拓者</a></td>
+					                        <td  align="center">14</td>
+					                             </tr>
+					                                                    <tr>
+					                        <td ><div class="num3">3</div></td>
+					                        <td ><a href="#" target="_blank">E.戴维斯</a></td>
+					                        <td ><a href="#" target="_blank">开拓者</a></td>
+					                        <td  align="center">12</td>
+					                             </tr>
+					                                                    <tr>
+					                        <td ><div class="num14">4</div></td>
+					                        <td ><a href="#" target="_blank">R.威斯布鲁克</a></td>
+					                        <td ><a href="#" target="_blank">雷霆</a></td>
+					                        <td  align="center">12</td>
+					                             </tr>
+					                                                    <tr>
+					                        <td ><div class="num15">5</div></td>
+					                        <td ><a href="#" target="_blank">A.法鲁克</a></td>
+					                        <td ><a href="#" target="_blank">开拓者</a></td>
+					                        <td  align="center">10</td>
+					                             </tr>				                      
+					                </tbody>
+					                </table>
+					            </div>
+					        </div>
+					               <div id="shujutab_div2" style='display: none;' >
+					            <div class="zhanji">
+					                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+					                    <tbody>
+					                    <tr align="left">
+					                        <th scope="col">&nbsp;</th>
+					                        <th width="42%" scope="col">姓名</th>
+					                        <th width="30%" scope="col">球队</th>
+					                        <th width="28%" scope="col">今日数据</th>
+					                    </tr>
+					                   
+					                                                    <tr>
+				                        <td ><div class="num1">1</div></td>
+				                        <td ><a href="#" target="_blank">D.韦德</a></td>
+				                        <td ><a href="#" target="_blank">热火</a></td>
+				                        <td  align="center">10</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num2">2</div></td>
+				                        <td ><a href="#" target="_blank">M.普拉姆利</a></td>
+				                        <td ><a href="#" target="_blank">开拓者</a></td>
+				                        <td  align="center">10</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num3">3</div></td>
+				                        <td ><a href="#" target="_blank">R.威斯布鲁克</a></td>
+				                        <td ><a href="#" target="_blank">雷霆</a></td>
+				                        <td  align="center">9</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num14">4</div></td>
+				                        <td ><a href="#" target="_blank">Z.帕楚里亚</a></td>
+				                        <td ><a href="#" target="_blank">小牛</a></td>
+				                        <td  align="center">9</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num15">5</div></td>
+				                        <td ><a href="#" target="_blank">D.利拉德</a></td>
+				                        <td ><a href="#" target="_blank">开拓者</a></td>
+				                        <td  align="center">6</td>
+				                            </tr>	                       
+			                        </tbody>
+					                </table>
+					            </div>
+					        </div>
+					               <div id="shujutab_div3" style='display: none;' >
+					            <div class="zhanji">
+					                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+					                    <tbody>
+					                    <tr align="left">
+					                        <th scope="col">&nbsp;</th>
+					                        <th width="42%" scope="col">姓名</th>
+					                        <th width="30%" scope="col">球队</th>
+					                        <th width="28%" scope="col">今日数据</th>
+					                    </tr>
+					                   
+					                                                    <tr>
+				                        <td ><div class="num1">1</div></td>
+				                        <td ><a href="#" target="_blank">J.克劳福德</a></td>
+				                        <td ><a href="#" target="_blank">快船</a></td>
+				                        <td  align="center">4</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num2">2</div></td>
+				                        <td ><a href="#" target="_blank">K.沃克</a></td>
+				                        <td ><a href="#" target="_blank">黄蜂</a></td>
+				                        <td  align="center">3</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num3">3</div></td>
+				                        <td ><a href="#" target="_blank">C.保罗</a></td>
+				                        <td ><a href="#" target="_blank">快船</a></td>
+				                        <td  align="center">3</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num14">4</div></td>
+				                        <td ><a href="#" target="_blank">J.安德森</a></td>
+				                        <td ><a href="#" target="_blank">小牛</a></td>
+				                        <td  align="center">3</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num15">5</div></td>
+				                        <td ><a href="#" target="_blank">S.伊巴卡</a></td>
+				                        <td ><a href="#" target="_blank">雷霆</a></td>
+				                        <td  align="center">2</td>
+				                            </tr>
+					                    </tbody>
+					                </table>
+					            </div>
+					        </div>
+					               <div id="shujutab_div4" style='display: none;' >
+					            <div class="zhanji">
+					                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+					                    <tbody>
+					                    <tr align="left">
+					                        <th scope="col">&nbsp;</th>
+					                        <th width="42%" scope="col">姓名</th>
+					                        <th width="30%" scope="col">球队</th>
+					                        <th width="28%" scope="col">今日数据</th>
+					                    </tr>
+					                   
+					                                                    <tr>
+					                        <td ><div class="num1">1</div></td>
+					                        <td ><a href="#" target="_blank">A.法鲁克</a></td>
+					                        <td ><a href="#" target="_blank">开拓者</a></td>
+					                        <td  align="center">6</td>
+					                             </tr>
+					                                                    <tr>
+					                        <td ><div class="num2">2</div></td>
+					                        <td ><a href="#" target="_blank">J.约翰逊</a></td>
+					                        <td ><a href="#" target="_blank">热火</a></td>
+					                        <td  align="center">4</td>
+					                             </tr>
+					                                                    <tr>
+					                        <td ><div class="num3">3</div></td>
+					                        <td ><a href="#" target="_blank">R.威斯布鲁克</a></td>
+					                        <td ><a href="#" target="_blank">雷霆</a></td>
+					                        <td  align="center">3</td>
+					                             </tr>
+					                                                    <tr>
+					                        <td ><div class="num14">4</div></td>
+					                        <td ><a href="#" target="_blank">K.杜兰特</a></td>
+					                        <td ><a href="#" target="_blank">雷霆</a></td>
+					                        <td  align="center">3</td>
+					                             </tr>
+					                                                    <tr>
+					                        <td ><div class="num15">5</div></td>
+					                        <td ><a href="#" target="_blank">D.韦特斯</a></td>
+					                        <td ><a href="#" target="_blank">雷霆</a></td>
+					                        <td  align="center">3</td>
+					                    	</tr>
+									</tbody>
+					                </table>
+					            </div>
+					        </div>
+					               <div id="shujutab_div5" style='display: none;' >
+					            <div class="zhanji">
+					                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+					                    <tbody>
+					                    <tr align="left">
+					                        <th scope="col">&nbsp;</th>
+					                        <th width="42%" scope="col">姓名</th>
+					                        <th width="30%" scope="col">球队</th>
+					                        <th width="28%" scope="col">今日数据</th>
+					                    </tr>
+					                   
+					                                                    <tr>
+				                        <td ><div class="num1">1</div></td>
+				                        <td ><a href="#" target="_blank">D.乔丹</a></td>
+				                        <td ><a href="#" target="_blank">快船</a></td>
+				                        <td  align="center">4</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num2">2</div></td>
+				                        <td ><a href="#" target="_blank">H.怀特塞德</a></td>
+				                        <td ><a href="#" target="_blank">热火</a></td>
+				                        <td  align="center">3</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num3">3</div></td>
+				                        <td ><a href="#" target="_blank">A.法鲁克</a></td>
+				                        <td ><a href="#" target="_blank">开拓者</a></td>
+				                        <td  align="center">3</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num14">4</div></td>
+				                        <td ><a href="#" target="_blank">M.普拉姆利</a></td>
+				                        <td ><a href="#" target="_blank">开拓者</a></td>
+				                        <td  align="center">3</td>
+				                             </tr>
+				                                                    <tr>
+				                        <td ><div class="num15">5</div></td>
+				                        <td ><a href="#" target="_blank">K.沃克</a></td>
+				                        <td ><a href="#" target="_blank">黄蜂</a></td>
+				                        <td  align="center">2</td>
+				                             </tr>
+					                    </tbody>
+					                </table>
+					            </div>
+					        </div>
+					    </div>
+					
+					</div>
+					<div id="data_button" class="bottom">
+					    <a target="_blank" href="#">2015-2016 NBA战绩排行榜</a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="footer">
+			
+		</div>
+	</body>
+</html>
